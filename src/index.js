@@ -8,11 +8,14 @@ import {ToastContainer} from "react-toastify";
 // styles
 import 'react-toastify/dist/ReactToastify.css';
 import './assets/styles/styles.scss'
+import {BrowserRouter} from "react-router-dom";
 
 const root = createRoot(document.getElementById('root'));
 root.render(
-    <Provider store={store}>
-        <App/>
-        <ToastContainer/>
-    </Provider>
+    <BrowserRouter>
+        <Provider store={store}>
+            <App/>
+            <ToastContainer/>
+        </Provider>
+    </BrowserRouter>
 );
